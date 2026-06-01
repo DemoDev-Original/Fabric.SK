@@ -257,3 +257,8 @@ Fabric.SK 0.2-SNAPSHOT supports:
 - Hot reload watcher
 - Compiled scripts (`.skc`)
 - VSCode extension
+
+
+> **WARNING**
+> Fabric.SK 0.2-SNAPSHOT is an experimental development build.
+> APIs, script syntax, and package formats may change before the 0.2.0 release. 
