@@ -9,7 +9,7 @@
 
 Fabric.SK allows Minecraft servers and clients running Fabric to load and execute Skript-style scripts without requiring Bukkit, Paper, Spigot, or any Bukkit-based API.
 
-> Current Version: 0.2.5-BETA
+> Current Version: 0.2-SNAPSHOT
 
 ---
 
