@@ -2,14 +2,14 @@
 
 **A simple Skript interpreter for Fabric.**
 
-![Version](https://img.shields.io/badge/version-0.2SNAPSHOT-blue)
+![Version](https://img.shields.io/badge/version-0.2.5ALPHA-blue)
 ![Minecraft](https://img.shields.io/badge/minecraft-1.21+-green)
 ![Java](https://img.shields.io/badge/java-21)
 
 
 Fabric.SK allows Minecraft servers and clients running Fabric to load and execute Skript-style scripts without requiring Bukkit, Paper, Spigot, or any Bukkit-based API.
 
-> Current Version: 0.2.5-BETA
+> Current Version: 0.2.5-ALPHA
 
 ---
 
@@ -216,7 +216,7 @@ Example:
 
 ```json
 {
-  "version": "0.2-SNAPSHOT",
+  "version": "0.2.5-ALPHA",
   "autoLoadScripts": true,
   "enableHeavySk": true,
   "enableErrorLogging": true
@@ -227,38 +227,13 @@ Example:
 
 ## Supported Minecraft Versions
 
-Fabric.SK 0.2-SNAPSHOT supports:
+Fabric.SK 0.2.5-ALPHA supports:
 
-- Minecraft 1.21.1
-- Minecraft 1.21.2
-- Minecraft 1.21.3
-- Minecraft 1.21.4
-- Minecraft 1.21.5
+- Minecraft 1.21.x
+- Minecraft 26.1.x
 
 ---
 
-## Roadmap
-
-### 0.2-SNAPSHOT
-
-- [x] `.sk` support
-- [x] `.heavysk` support
-- [x] Script loader
-- [x] Validation
-- [x] Error mapping
-- [x] Runtime registry
-
-### Coming soon
-
-- Variables
-- Conditions
-- Effects
-- Addons
-- Hot reload watcher
-- Compiled scripts (`.skc`)
-- VSCode extension
-
-
 > **WARNING**
-> Fabric.SK 0.2-SNAPSHOT is an experimental development build.
-> APIs, script syntax, and package formats may change before the 0.2.0 release. 
+> Fabric.SK 0.2.5-ALPHA is an experimental development build.
+> APIs, script syntax, and package formats may change before the 0.3.0 release. 
