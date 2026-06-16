@@ -2,7 +2,7 @@
 
 **A simple Skript interpreter for Fabric.**
 
-![Version](https://img.shields.io/badge/version-0.2SNAPSHOT-blue)
+![Version](https://img.shields.io/badge/version-0.2.5BETA-blue)
 ![Minecraft](https://img.shields.io/badge/minecraft-1.21+-green)
 ![Java](https://img.shields.io/badge/java-21)
 
