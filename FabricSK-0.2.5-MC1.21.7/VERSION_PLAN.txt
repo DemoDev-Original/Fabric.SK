@@ -1,0 +1,5 @@
+Fabric.SK 0.2.5 port target: Minecraft 1.21.7
+Fabric Loader: 0.17.2
+Fabric API: 0.129.0+1.21.7
+Loom: 1.11.8
+Engine version must remain exactly 0.2x.

@@ -1,0 +1,16 @@
+# Example only: this script does not run until manually loaded.
+on load:
+    set {ice_sword} to netherite sword of unbreaking 1
+    set name of {ice_sword} to "&bIce Sword"
+    set lore of {ice_sword} to "", "&7Hit enemies to freeze them", "&7and apply Slowness II!"
+
+command /icesword:
+    trigger:
+        give player {ice_sword}
+        send "&aYou have received the Ice Sword!" to player
+
+on damage:
+    if attacker is a player:
+        if name of attacker's tool is "&b Ice Sword":
+            apply slowness 2 to victim for 5 seconds
+            set freeze ticks of victim to 140

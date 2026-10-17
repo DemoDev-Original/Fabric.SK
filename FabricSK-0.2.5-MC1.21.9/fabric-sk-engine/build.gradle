@@ -1,0 +1,29 @@
+plugins {
+    id "fabric-loom"
+}
+
+base {
+    archivesName = "fabric-sk-engine"
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings loom.officialMojangMappings()
+
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+}
+
+processResources {
+    inputs.property "version", project.engine_version
+    inputs.property "loader_version", project.loader_version
+    inputs.property "minecraft_version", project.minecraft_version
+
+    filesMatching("fabric.mod.json") {
+        expand(
+            version: project.engine_version,
+            loader_version: project.loader_version,
+            minecraft_version: project.minecraft_version
+        )
+    }
+}

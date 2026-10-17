@@ -1,0 +1,7 @@
+command /hello:
+    trigger:
+        send "Hello from Fabric.SK!" to player
+        give player netherite sword named "&eLightning Sword"
+
+on rightclick:
+    lightning at player
