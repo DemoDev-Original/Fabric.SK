@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "fabricsk",
+  "version": "${version}",
+  "name": "Fabric.SK",
+  "description": "A Skript-style scripting system for Fabric servers and clients.",
+  "authors": [
+    "DemoDev"
+  ],
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.demodev.fabricsk.FabricSK"
+    ]
+  },
+  "jars": [
+    {
+      "file": "META-INF/jars/fabric-sk-engine-0.2x.jar"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "~26.1",
+    "fabric-api": "*",
+    "java": ">=25"
+  }
+}

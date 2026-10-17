@@ -1,0 +1,54 @@
+# Demonstration only: these are not built-in Fabric.SK items.
+# Edit names, materials, lore, and abilities to create your own items.
+
+command /getitems:
+    permission: fabricsk.admin
+    permission message: &cYou do not have permission to use this command!
+    trigger:
+        set {_spellbook} to book
+        set name of {_spellbook} to "&dSpell Tome of Evocation"
+        set lore of {_spellbook} to "&7Right-click to unleash", "&7a ring of fire around you!"
+        give player {_spellbook}
+
+        set {_axe} to netherite axe
+        set name of {_axe} to "&cExecutioner's Greataxe"
+        set lore of {_axe} to "&7Deals bonus damage", "&7to low-health targets!"
+        give player {_axe}
+
+        set {_mace} to mace
+        set name of {_mace} to "&eMjolnir's Fragment"
+        set lore of {_mace} to "&7Right-click to leap", "&7and strike with lightning!"
+        give player {_mace}
+        send "&a[Fabric.SK] All 3 example items given!" to player
+
+on rightclick:
+    if name of player's tool is "&dSpell Tome of Evocation":
+        play sound "minecraft:entity.illusioner.prepare_blindness" at location of player
+        loop entities in radius 5 of location of player:
+            if loop-entity is not player:
+                ignite loop-entity for 6 seconds
+                apply instant damage 1 to loop-entity without particles
+        send "&dYou cast Fire Nova!" to player
+
+on damage:
+    if attacker is a player:
+        if name of attacker's tool is "&cExecutioner's Greataxe":
+            if health of victim is less than or equal to 12:
+                apply blindness 1 to victim for 3 seconds
+                apply slowness 3 to victim for 4 seconds
+                set damage to damage * 2
+                send "&cEXECUTION STRIKE!" to attacker
+            else:
+                apply slowness 1 to victim for 2 seconds
+
+on rightclick:
+    if name of player's tool is "&eMjolnir's Fragment":
+        push player upward at speed 1.2
+        send "&eYou leap into the air!" to player
+
+on damage:
+    if attacker is a player:
+        if name of attacker's tool is "&eMjolnir's Fragment":
+            strike lightning at location of victim
+            apply weakness 2 to victim for 5 seconds
+            apply slowness 2 to victim for 3 seconds

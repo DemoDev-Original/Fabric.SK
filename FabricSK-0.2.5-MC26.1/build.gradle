@@ -1,0 +1,8 @@
+plugins {
+    id "net.fabricmc.fabric-loom" version "${loom_version}" apply false
+}
+
+allprojects {
+    group = project.maven_group
+    version = project.fabric_sk_version
+}
