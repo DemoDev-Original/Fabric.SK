@@ -1,0 +1,62 @@
+plugins {
+    id "net.fabricmc.fabric-loom-remap"
+}
+
+base {
+    archivesName = "fabric-sk"
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings loom.officialMojangMappings()
+
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    implementation project(
+        path: ":fabric-sk-engine",
+        configuration: "namedElements"
+    )
+}
+
+processResources {
+    inputs.property "version", project.fabric_sk_version
+    inputs.property "engine_version", project.engine_version
+    inputs.property "loader_version", project.loader_version
+    inputs.property "minecraft_version", project.minecraft_version
+
+    filesMatching("fabric.mod.json") {
+        expand(
+            version: project.fabric_sk_version,
+            engine_version: project.engine_version,
+            loader_version: project.loader_version,
+            minecraft_version: project.minecraft_version
+        )
+    }
+}
+
+tasks.named("remapJar") {
+    dependsOn(":fabric-sk-engine:remapJar")
+
+    doLast {
+        File engineJar = project(":fabric-sk-engine")
+            .tasks.named("remapJar")
+            .get()
+            .archiveFile
+            .get()
+            .asFile
+
+        File outputJar = archiveFile.get().asFile
+
+        ant.zip(destfile: outputJar, update: true) {
+            zipfileset(
+                file: engineJar,
+                fullpath: "META-INF/jars/fabric-sk-engine-${project.engine_version}.jar"
+            )
+        }
+    }
+}
+
+tasks.named("build") {
+    dependsOn(tasks.named("remapJar"))
+}

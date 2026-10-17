@@ -1,0 +1,13 @@
+command /lightning [<player>]:
+    permission: example.lightning
+    permission message: "&cYou do not have permission to use this command!"
+    trigger:
+        if arg-1 is set:
+            if arg-1 is online:
+                strike lightning at location of arg-1
+                send "&aStruck lightning on &e%arg-1%&a!" to player
+            else:
+                send "&cThat player is not online!" to player
+        else:
+            strike lightning at location of player
+            send "&aStruck lightning at your location!" to player
