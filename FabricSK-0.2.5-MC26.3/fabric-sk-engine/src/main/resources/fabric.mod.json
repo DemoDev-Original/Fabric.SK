@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "fabricsk-engine",
+  "version": "${version}",
+  "name": "Fabric.SK Engine",
+  "description": "The embedded script parser, loader, package reader, and runtime for Fabric.SK.",
+  "authors": [
+    "DemoDev"
+  ],
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.demodev.fabricsk.engine.FabricSKEngine"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "~26.3",
+    "fabric-api": "*",
+    "java": ">=25"
+  }
+}
