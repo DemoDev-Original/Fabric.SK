@@ -6,18 +6,18 @@ Fabric.SK is a Fabric mod project that provides a Skript-inspired scripting engi
 
 This repository contains separate Gradle projects for each Minecraft version. Open the folder matching your Minecraft version and build that project independently.
 
-| Minecraft version | Project folder | Build status |
-|---|---|---|
-| 1.21.7 | `FabricSK-0.2.5-MC1.21.7` | Needs final build confirmation |
-| 1.21.8 | `FabricSK-0.2.5-MC1.21.8` | Needs final build confirmation |
-| 1.21.9 | `FabricSK-0.2.5-MC1.21.9` | Reported compiled successfully |
-| 1.21.10 | `FabricSK-0.2.5-MC1.21.10` | Reported compiled successfully |
-| 1.21.11 | `FabricSK-0.2.5-MC1.21.11` | Release source included |
-| 26.1 | `FabricSK-0.2.5-MC26.1` | Reported compiled successfully |
-| 26.1.1 | `FabricSK-0.2.5-MC26.1.1` | Reported compiled successfully |
-| 26.1.2 | `FabricSK-0.2.5-MC26.1.2` | Reported compiled successfully |
-| 26.2 | `FabricSK-0.2.5-MC26.2` | Fix included; build confirmation pending |
-| 26.3 | `FabricSK-0.2.5-MC26.3` | Fix included; build confirmation pending |
+| Minecraft version | Project folder |
+|---|---
+| 1.21.7 | `FabricSK-0.2.5-MC1.21.7` |
+| 1.21.8 | `FabricSK-0.2.5-MC1.21.8` |
+| 1.21.9 | `FabricSK-0.2.5-MC1.21.9` |
+| 1.21.10 | `FabricSK-0.2.5-MC1.21.10` |
+| 1.21.11 | `FabricSK-0.2.5-MC1.21.11` |
+| 26.1 | `FabricSK-0.2.5-MC26.1` |
+| 26.1.1 | `FabricSK-0.2.5-MC26.1.1` |
+| 26.1.2 | `FabricSK-0.2.5-MC26.1.2` |
+| 26.2 | `FabricSK-0.2.5-MC26.2` |
+| 26.3 | `FabricSK-0.2.5-MC26.3` |
 
 Build status reflects user-reported results and has not been independently verified in this packaging environment. In particular, the 26.2 and 26.3 source fixes are included but should be rebuilt and tested before being described as stable releases.
 
